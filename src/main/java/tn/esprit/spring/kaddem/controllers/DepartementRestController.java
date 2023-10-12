@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/departement")
 public class DepartementRestController {
 	IDepartementService departementService;
-	// http://localhost:8089/Kaddem/departement/retrieve-all-departements
+	// http://localhost:8089/Kaddem/departement/retrieve-all-departements **
 	@GetMapping("/retrieve-all-departements")
 	public List<Departement> getDepartements() {
 		List<Departement> listDepartements = departementService.retrieveAllDepartements();
