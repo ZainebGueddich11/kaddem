@@ -60,7 +60,7 @@ public class EquipeServiceImplMock {
     @Test
     @Order(2)
     public void testRetrieveEquipe() {
-        when(eqRep.findById(1)).thenReturn(Optional.of(equipe));
+        when(eqRep.findById(2)).thenReturn(Optional.of(equipe));
         Equipe equipe1 = equipeService.retrieveEquipe(1);
         Assertions.assertNotNull(equipe1);
     }
