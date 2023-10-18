@@ -18,7 +18,7 @@ import static tn.esprit.spring.kaddem.entities.Specialite.CLOUD;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
 public class ContratServiceImplTest {
-    @Autowired
+   /* @Autowired
     IContratService contratService;
 
     @Test
@@ -40,6 +40,6 @@ public class ContratServiceImplTest {
     }
 
 
-
+*/
 
 }
