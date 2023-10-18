@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
-@ActiveProfiles("test")
+/*@ActiveProfiles("test")*/
 public class EquipeServiceImplMock {
     @Mock
     EquipeRepository eqRep;
