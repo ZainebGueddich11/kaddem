@@ -33,7 +33,7 @@ public class EtudiantServicesImplTest {
     @Order(2)
     public void testAddEtudiant()
     {
-        Etudiant etudiant=new Etudiant(1,"Kabboura","" ,GAMIX);
+        Etudiant etudiant=new Etudiant(99,"Kabboura","Sirine" ,GAMIX);
         Etudiant etudiant1= EtudiantServiceImpl.addEtudiant(etudiant);
         Assertions.assertEquals(etudiant.getNomE(),etudiant1.getNomE());
     }
