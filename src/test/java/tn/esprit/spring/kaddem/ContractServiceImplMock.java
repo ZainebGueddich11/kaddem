@@ -1,9 +1,6 @@
 package tn.esprit.spring.kaddem;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -17,8 +14,9 @@ import tn.esprit.spring.kaddem.services.ContratServiceImpl;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
-import static tn.esprit.spring.kaddem.entities.Specialite.CLOUD;
+import static tn.esprit.spring.kaddem.entities.Specialite.*;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -32,9 +30,12 @@ public class ContractServiceImplMock {
     ContratServiceImpl contratService;
 
     Contrat contrat2 = new Contrat(1,new Date(),new Date(),CLOUD,true,5000);
+    Contrat contrat3 = new Contrat(2,new Date(),new Date(),RESEAUX,true,5100);
+    Contrat contrat4 = new Contrat(3,new Date(),new Date(),IA,true,5200);
 
 
     @Test
+    @Order(1)
     public void TestRetrieveAllContrats()
     {
         List<Contrat> contratsFactices = new ArrayList<>();
@@ -46,7 +47,16 @@ public class ContractServiceImplMock {
         // Vérifiez les assertions pour vous assurer que le comportement est conforme à vos attentes
         // Exemple : vérifiez la taille de la liste
         Assertions.assertEquals(0, result.size());
-
-
     }
+
+    @Test
+    @Order(2)
+    public void testRetrieveContrat() {
+
+        Mockito.when(contratRepository.findById(1)).thenReturn(Optional.of(contrat2));
+        Contrat contrat = contratService.retrieveContrat(1);
+        Assertions.assertNotNull(contrat);
+    }
+
+
 }
