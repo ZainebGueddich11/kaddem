@@ -35,7 +35,6 @@ public class ContractServiceImplMock {
 
 
     @Test
-    @Order(1)
     public void TestRetrieveAllContrats()
     {
         List<Contrat> contratsFactices = new ArrayList<>();
@@ -46,11 +45,10 @@ public class ContractServiceImplMock {
 
         // Vérifiez les assertions pour vous assurer que le comportement est conforme à vos attentes
         // Exemple : vérifiez la taille de la liste
-        Assertions.assertEquals(0, result.size());
+        Assertions.assertEquals(1, result.size());
     }
 
     @Test
-    @Order(2)
     public void testRetrieveContrat() {
 
         Mockito.when(contratRepository.findById(1)).thenReturn(Optional.of(contrat2));
