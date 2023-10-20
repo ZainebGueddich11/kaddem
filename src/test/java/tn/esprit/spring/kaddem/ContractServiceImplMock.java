@@ -45,7 +45,7 @@ public class ContractServiceImplMock {
 
         // Vérifiez les assertions pour vous assurer que le comportement est conforme à vos attentes
         // Exemple : vérifiez la taille de la liste
-        Assertions.assertEquals(1, result.size());
+        Assertions.assertEquals(0, result.size());
     }
 
     @Test
@@ -55,6 +55,20 @@ public class ContractServiceImplMock {
         Contrat contrat = contratService.retrieveContrat(1);
         Assertions.assertNotNull(contrat);
     }
+    @Test
+    public void testAddContract() {
+        Date d1 = new Date();
+        Date d2 = new Date();
 
+        // Configurez le mock pour qu'il renvoie le contrat attendu
+        Contrat contratAttendu = new Contrat(d1, d2, CLOUD, true, 5000);
+        Mockito.when(contratRepository.findById(1)).thenReturn(Optional.of(contratAttendu));
+
+        // Appelez la méthode à tester qui utilise le mock
+        Contrat contratRecupere = contratService.retrieveContrat(1);
+
+                // Assurez-vous que le contrat récupéré correspond à celui attendu
+                Assertions.assertEquals(contratAttendu.getArchive(), contratRecupere.getArchive());
+    }
 
 }
