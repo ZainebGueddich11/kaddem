@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import static org.mockito.Mockito.when;
 import static tn.esprit.spring.kaddem.services.entities.Option.GAMIX;
 
 @SpringBootTest
@@ -54,8 +55,8 @@ public class EtudiantServiceImplMock {
         @Test
         public void TestRetrieveAllContrats()
         {
-            Mockito.when(etudiantRepository.findById((int) Mockito.anyLong())).thenReturn(Optional.ofNullable(etudiant));
-            Etudiant etudiant1=etudiantService.retrieveEtudiant(2);
+            when(etudiantRepository.findById(1)).thenReturn(Optional.of(etudiant));
+            Etudiant etudiant1=etudiantService.retrieveEtudiant(1);
             Assertions.assertNotNull(etudiant1);
         }
     }
