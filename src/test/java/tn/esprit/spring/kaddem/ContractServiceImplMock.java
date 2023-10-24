@@ -1,10 +1,12 @@
 package tn.esprit.spring.kaddem;
 
+import org.junit.Before;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.spring.kaddem.entities.Contrat;
@@ -33,7 +35,10 @@ public class ContractServiceImplMock {
     Contrat contrat3 = new Contrat(2,new Date(),new Date(),RESEAUX,true,5100);
     Contrat contrat4 = new Contrat(3,new Date(),new Date(),IA,true,5200);
 
-
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
     @Test
     public void TestRetrieveAllContrats()
     {

@@ -69,7 +69,6 @@
 
         <!-- Autres dépendances de votre projet -->
     </dependencies>
-
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
@@ -77,7 +76,6 @@
             <url>http://192.168.1.25:8081/repository/maven-snapshots/</url>
         </repository>
     </distributionManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -112,6 +110,7 @@
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 
 </project>
