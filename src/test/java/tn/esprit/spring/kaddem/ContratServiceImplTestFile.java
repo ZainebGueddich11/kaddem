@@ -2,8 +2,8 @@ package tn.esprit.spring.kaddem;
 
 
 import org.junit.jupiter.api.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.spring.kaddem.entities.Contrat;
 import tn.esprit.spring.kaddem.services.IContratService;
@@ -17,8 +17,8 @@ import static tn.esprit.spring.kaddem.entities.Specialite.CLOUD;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
-public class ContratServiceImplTest {
-   /* @Autowired
+public class ContratServiceImplTestFile {
+    @Autowired
     IContratService contratService;
 
     @Test
@@ -31,7 +31,7 @@ public class ContratServiceImplTest {
 
     @Test
     @Order(2)
-    public void TestAddContract() throws ParseException {
+    public void TestAddContract() {
         Date d1 = new Date();
         Date d2 = new Date();
         Contrat contrat=new Contrat(d1,d2,CLOUD,true,5000);
@@ -40,6 +40,5 @@ public class ContratServiceImplTest {
     }
 
 
-*/
 
 }
