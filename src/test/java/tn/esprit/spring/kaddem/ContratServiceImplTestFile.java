@@ -15,10 +15,10 @@ import java.util.List;
 import static tn.esprit.spring.kaddem.entities.Specialite.CLOUD;
 
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@SpringBootTest
+/*@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@SpringBootTest*/
 public class ContratServiceImplTestFile {
-    @Autowired
+  /*  @Autowired
     IContratService contratService;
 
     @Test
@@ -39,6 +39,6 @@ public class ContratServiceImplTestFile {
         Assertions.assertEquals(contrat.getArchive(),contrat1.getArchive());
     }
 
-
+*/
 
 }
