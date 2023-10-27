@@ -3,7 +3,7 @@ version: '3.3'
 
 services:
   mysqldb:
-    container_name: mysqldatabase
+    container_name: mysqldb
     image: mysql:5.7
     restart: unless-stopped
     environment:
@@ -15,7 +15,7 @@ services:
       - db:/var/lib/mysql
   app:
     depends_on:
-      - mysqldatabase
+      - mysqldb
     image: sirinekabboura/kaddem1:0.0.1
     container_name: projetkaddem1
     restart: on-failure
