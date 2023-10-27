@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-@Configuration
 public class KaddemApplication {
 
     public static void main(String[] args) {
