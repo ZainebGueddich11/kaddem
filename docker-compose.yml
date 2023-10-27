@@ -3,7 +3,7 @@ version: '3.3'
 
 services:
   mysqldb:
-    container_name: mysqldb
+    container_name: mysqldatabase
     image: mysql:5.7
     restart: unless-stopped
     environment:
