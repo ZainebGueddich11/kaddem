@@ -89,6 +89,4 @@ public class ContractServiceImplTest {
         Assertions.assertEquals(contratFactice, contratAjoute);
     }
 
-
-
 }

@@ -1,6 +1,5 @@
 version: '3.3'
 
-
 services:
   mysqldb:
     container_name: mysqldb
@@ -16,8 +15,8 @@ services:
   app:
     depends_on:
       - mysqldb
-    image: sirinekabboura/kaddemf:0.0.1
-    container_name: projetkaddemm
+    image: sirinekabboura/kaddemfinal:0.0.1
+    container_name: projetkaddemfinal
     restart: on-failure
     ports:
       - "8089:8089"
