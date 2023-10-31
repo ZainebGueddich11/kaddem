@@ -1,0 +1,188 @@
+<!--
+<div class="slideout-content">
+  &lt;!&ndash; Existing HTML structure, omitted for brevity &ndash;&gt;
+  &lt;!&ndash; ... &ndash;&gt;
+  <div
+          class="modalsd modal-slide-in sdfade new-user-modal"
+          id="modals-slide-in"
+  >
+    <div class="modal-dialog">
+      <form [formGroup]="clientForm" class="add-new-user modal-content pt-0" (ngSubmit)="submit('new-user-sidebar')">
+        <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                (click)="toggleSidebar('new-user-sidebar')"
+        >
+          ×
+        </button>
+        <div class="modal-header mb-1">
+          <h6 class="modal-title" id="exampleModalLabel">New contrat</h6>
+        </div>
+  <div class="modal-body flex-grow-1">
+    &lt;!&ndash; Contract details &ndash;&gt;
+
+
+    <div class="form-group">
+      <label for="startDate">Date de début</label>
+      <input type="date" formControlName="dateDebutContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dateDebutContrat.errors }" />
+      <div *ngIf="submitted && f.dateDebutContrat.errors" class="invalid-feedback">
+        <div *ngIf="f.dateDebutContrat.errors.required">La date de début est requise !</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">Date de fin</label>
+      <input type="date" formControlName="dateFinContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dateFinContrat.errors }" />
+      <div *ngIf="submitted && f.dateFinContrat.errors" class="invalid-feedback">
+        <div *ngIf="f.dateFinContrat.errors.required">La date de fin est requise !</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="contractAmount">Montant du contrat</label>
+      <input type="text" formControlName="montantContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.montantContrat.errors }" placeholder="Entrez le montant du contrat" />
+      <div *ngIf="submitted && f.montantContrat.errors" class="invalid-feedback">
+        <div *ngIf="f.montantContrat.errors.required">Le montant du contrat est requis !</div>
+      </div>
+    </div>
+
+   &lt;!&ndash; <div class="form-group">
+      <label for="archiveStatus">Statut de l'archive</label>
+      <input type="text" formControlName="archive" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.archive.errors }" placeholder="Entrez le statut de l'archive" />
+      <div *ngIf="submitted && f.archive.errors" class="invalid-feedback">
+        <div *ngIf="f.archive.errors.required">Le statut de l'archive est requis !</div>
+      </div>
+    </div>&ndash;&gt;
+    <div class="custom-control custom-switch">
+      <label for="archiveStatus" class="mb-50">Statut de l'archive</label>
+      <input
+              type="checkbox"
+              formControlName="archive"
+              class="custom-control-input"
+              id="customSwitchArchive"
+      />
+      <label class="custom-control-label" for="customSwitchArchive"></label>
+    </div>
+
+    <div class="form-group">
+      <label for="specialty">Spécialité</label>
+      <input type="text" formControlName="specialite" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.specialite.errors }" placeholder="Entrez la spécialité" />
+      <div *ngIf="submitted && f.specialite.errors" class="invalid-feedback">
+        <div *ngIf="f.specialite.errors.required">La spécialité est requise !</div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary ml-1">
+        Register
+      </button>
+      <button class="btn btn-primary ml-1" type="reset" (click)="onReset()">
+        Cancel
+      </button>
+    </div>
+  </div>
+      </form>
+    </div>
+  </div>
+</div>-->
+<div class="slideout-content">
+  <!-- Structure HTML existante, omise pour des raisons de concision -->
+  <!-- ... -->
+  <div
+          class="modalsd modal-slide-in sdfade new-user-modal"
+          id="modals-slide-in"
+  >
+    <div class="modal-dialog">
+      <form [formGroup]="clientForm" class="add-new-user modal-content pt-0" (ngSubmit)="submit('new-user-sidebar')">
+        <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                (click)="toggleSidebar('new-user-sidebar')"
+        >
+          ×
+        </button>
+        <div class="modal-header mb-1">
+          <h6 class="modal-title" id="exampleModalLabel">New contrat</h6>
+        </div>
+        <div class="modal-body flex-grow-1">
+          <!-- Détails du contrat -->
+          <div class="form-group">
+            <label for="startDate">Date de début</label>
+            <input type="date" formControlName="dateDebutContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dateDebutContrat.errors }" />
+            <div *ngIf="submitted && f.dateDebutContrat.errors" class="invalid-feedback">
+              <div *ngIf="f.dateDebutContrat.errors.required">La date de début est requise !</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="endDate">Date de fin</label>
+            <input type="date" formControlName="dateFinContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dateFinContrat.errors }" />
+            <div *ngIf="submitted && f.dateFinContrat.errors" class="invalid-feedback">
+              <div *ngIf="f.dateFinContrat.errors.required">La date de fin est requise !</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contractAmount">Montant du contrat</label>
+            <input type="text" formControlName="montantContrat" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.montantContrat.errors }" placeholder="Entrez le montant du contrat" />
+            <div *ngIf="submitted && f.montantContrat.errors" class="invalid-feedback">
+              <div *ngIf="f.montantContrat.errors.required">Le montant du contrat est requis !</div>
+            </div>
+          </div>
+
+          <!--<div class="custom-control custom-switch">
+            <label for="archiveStatus" class="mb-50">Statut de l'archive</label>
+            <input
+                    type="checkbox"
+                    formControlName="archive"
+                    class="custom-control-input"
+                    id="customSwitchArchive"
+            />
+            <label class="custom-control-label" for="customSwitchArchive"></label>
+          </div>-->
+          <div class="custom-control custom-switch">
+            <label for="archiveStatus" class="mb-50">Statut de l'archive</label><br>
+            <input
+                    type="checkbox"
+                    formControlName="archive"
+                    class="custom-control-input"
+                    id="customSwitchArchive"
+                    [checked]="!clientForm.get('archive').value"/>
+            <label class="custom-control-label" for="customSwitchArchive"></label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="specialty">Spécialité</label>
+            <select id="specialty" formControlName="specialite" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.specialite.errors }">
+              <option value="">Sélectionnez une spécialité</option>
+              <option value="IA">IA</option>
+              <option value="RESEAUX">RESEAUX</option>
+              <option value="CLOUD">CLOUD</option>
+              <option value="SECURITE">SECURITE</option>
+            </select>
+            <div *ngIf="submitted && f.specialite.errors" class="invalid-feedback">
+              <div *ngIf="f.specialite.errors.required">La spécialité est requise !</div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary ml-1">
+              Register
+            </button>
+            <button class="btn btn-primary ml-1" type="reset" (click)="onReset()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
