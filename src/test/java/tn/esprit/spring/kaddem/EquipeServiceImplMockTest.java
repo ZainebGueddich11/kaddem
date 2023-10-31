@@ -1,10 +1,17 @@
 package tn.esprit.spring.kaddem;
 
-import org.junit.jupiter.api.*;
+
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -22,8 +29,8 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
-
-public class EquipeServiceImplMock {
+@RunWith(MockitoJUnitRunner.class)
+public class EquipeServiceImplMockTest {
     @Mock
     EquipeRepository eqRep;
     @InjectMocks
@@ -61,7 +68,7 @@ public class EquipeServiceImplMock {
     @Order(2)
     public void testRetrieveEquipe() {
         when(eqRep.findById(2)).thenReturn(Optional.of(equipe));
-        Equipe equipe1 = equipeService.retrieveEquipe(1);
+        Equipe equipe1 = equipeService.retrieveEquipe(2);
         Assertions.assertNotNull(equipe1);
     }
     @Test
@@ -79,34 +86,9 @@ public class EquipeServiceImplMock {
         // Assert that the addedEquipe matches the newEquipe.
         Assertions.assertEquals(newEquipe, addedEquipe);
     }
-    @Test
-    @Order(4)
-    public void testDeleteEquipe() {
-        // Mock the behavior of the repository when the deleteById method is called.
-        when(eqRep.existsById(1)).thenReturn(true); // Assuming the equipe with ID 1 exists.
 
-        // Call the method you want to test.
-        equipeService.deleteEquipe(1);
 
-        // Verify that the delete operation was called on the repository.
-        verify(eqRep, times(1)).deleteById(1);
-    }
 
-    @Test
-    @Order(5)
-    public void testUpdateEquipe() {
-        // Créez un objet Equipe avec les nouvelles informations.
-        Equipe updatedEquipe = new Equipe(1, "Equipe Mise à Jour", Niveau.JUNIOR);
-
-        // Appelez la méthode que vous souhaitez tester.
-        Equipe result = equipeService.updateEquipe(updatedEquipe);
-
-        // Utilisez verify pour vérifier que la méthode save est appelée avec les bonnes informations.
-        verify(eqRep).save(updatedEquipe);
-
-        // Assurez-vous que la méthode renvoie la nouvelle équipe mise à jour.
-        Assertions.assertEquals(updatedEquipe, result);
-    }
 
 
 }

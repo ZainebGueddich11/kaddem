@@ -1,5 +1,6 @@
 package tn.esprit.spring.kaddem;
 
+
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,20 +10,14 @@ import tn.esprit.spring.kaddem.services.IEquipeService;
 
 import java.util.List;
 
-/*@SpringBootTest
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)*/
+@SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class EquipeServiceImplTest {
-  /*  @Autowired
+    @Autowired
     IEquipeService equipeService;
+
     @Test
     @Order(1)
-    public void TestRetrieveAllEquipe()
-    {
-        List<Equipe> equipes = equipeService.retrieveAllEquipes();
-        Assertions.assertEquals(1,equipes.size());
-    }
-    @Test
-    @Order(2)
     public void TestaddEquipe()
     {
        String nomEquipe= "equipe 1";
@@ -30,11 +25,5 @@ public class EquipeServiceImplTest {
       Equipe eqAddded = equipeService.addEquipe(eq);
       Assertions.assertEquals(eqAddded.getNiveau(),eq.getNiveau());
     }
-    @Test
-    @Order(3)
-    public void testDeleteUser()
-    {
-        equipeService.deleteEquipe(2);
-        Assertions.assertNull(equipeService.retrieveEquipe(2));
-    }*/
+
 }
