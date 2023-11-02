@@ -1,0 +1,8 @@
+{
+  "/kaddem/*": {
+    "target": "http://192.168.2.40:8089",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/kaddem": ""}
+  }
+}
