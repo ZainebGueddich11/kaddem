@@ -2,7 +2,7 @@ FROM node:18.16 AS build
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install -f
+RUN npm update -f
 COPY . .
 RUN npm run build
 FROM nginx:1.21.1
