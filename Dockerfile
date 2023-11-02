@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8089
 
-ADD http://192.168.2.40:8081/repository/maven-snapshots/tn/esprit/spring/kaddem/0.0.1-SNAPSHOT/kaddem-0.0.1-20231102.105116-1.jar /kaddem-0.0.1-20231102.105116-1.jar
-ENTRYPOINT ["java", "-jar", "/kaddem-0.0.1-20231102.105116-1.jar"]
+ADD http://192.168.2.40:8081/repository/maven-snapshots/tn/esprit/spring/kaddem/0.0.1-SNAPSHOT/kaddem-0.0.1-20231102.115321-5.jar /kaddem-0.0.1-20231102.115321-5.jar
+ENTRYPOINT ["java", "-jar", "/kaddem-0.0.1-20231102.115321-5.jar"]
