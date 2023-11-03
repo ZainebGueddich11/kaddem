@@ -7,7 +7,7 @@ import {ActivatedRoute} from "@angular/router";
     providedIn: 'root'
 })
 export class ContratService {
-    readonly API_URL = 'http://172.16.1.160:8089/kaddem/contrat';
+    readonly API_URL = 'http://192.168.1.25:8089/kaddem/contrat';
 
     constructor(private httpClient: HttpClient) { }
 
