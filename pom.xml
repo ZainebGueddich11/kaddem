@@ -18,11 +18,11 @@
         <start-class>tn.esprit.spring.kaddem.KaddemApplication</start-class>
     </properties>
     <distributionManagement>
-        <snapshotRepository>
+        <repository>
             <id>deploymentRepo</id>
             <name>Nexus Repository</name>
             <url>http://192.168.1.25:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
+        </repository>
     </distributionManagement>
     <dependencies>
         <dependency>
