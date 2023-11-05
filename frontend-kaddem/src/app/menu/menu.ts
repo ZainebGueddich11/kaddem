@@ -15,8 +15,8 @@ export const menu: CoreMenu[] = [
         children: [
 
             {
-                        id: 'contrat',
-                        title: 'Contrat',
+                        id: 'equipe',
+                        title: 'Equipe',
                         translate: 'MENU.APPS.USER.LIST',
                         type: 'item',
                         icon: 'file',
