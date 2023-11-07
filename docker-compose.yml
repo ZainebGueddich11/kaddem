@@ -38,6 +38,5 @@ services:
       - app
     ports:
       - 4200:80
-
 volumes:
   db:
