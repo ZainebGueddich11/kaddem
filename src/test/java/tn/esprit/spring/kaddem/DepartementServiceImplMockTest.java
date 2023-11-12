@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
-public class DepartementServiceImplMock {
+public class DepartementServiceImplMockTest {
     @Mock
     DepartementRepository depRep;
     @InjectMocks
