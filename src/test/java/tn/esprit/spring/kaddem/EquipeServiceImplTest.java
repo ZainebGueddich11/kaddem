@@ -32,7 +32,7 @@ public class EquipeServiceImplTest {
 
     @Test
     @Order(2)
-    void retrieveAllStocks() {
+    void retrieveAllEquipes() {
         List<Equipe> listEquipe = equipeService.retrieveAllEquipes();
         Assertions.assertNotNull(listEquipe);
     }
