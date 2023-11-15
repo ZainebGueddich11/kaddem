@@ -76,7 +76,7 @@ export class NewUserSidebarComponent implements OnInit {
     this.equipeService.addEquipe(this.clientForm.value).subscribe(
         (result) => {
           if (result) {
-            this._toastr.success('Contrat added with success', 'Success');
+            this._toastr.success('Equipe added with success', 'Success');
 
             this._coreSidebarService.getSidebarRegistry(sideBarName).close();
             this._router.routeReuseStrategy.shouldReuseRoute = () => false;
