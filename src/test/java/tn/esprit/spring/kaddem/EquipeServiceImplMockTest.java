@@ -37,8 +37,8 @@ public class EquipeServiceImplMockTest {
     Equipe equipe = new Equipe(1, "equipe2", Niveau.SENIOR);
     List<Equipe> equipes = new ArrayList<Equipe>() {
         {
-            add(new Equipe(2, "equipe 3", Niveau.EXPERT));
-            add(new Equipe(3, "equipe 4", Niveau.JUNIOR));
+            add(new Equipe(2, "equ 01", Niveau.EXPERT));
+            add(new Equipe(3, "equ 02", Niveau.JUNIOR));
 
         }
     };
