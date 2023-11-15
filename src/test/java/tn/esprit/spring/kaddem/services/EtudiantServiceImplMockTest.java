@@ -4,28 +4,22 @@ package tn.esprit.spring.kaddem.services;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import tn.esprit.spring.kaddem.services.entities.Etudiant;
 import tn.esprit.spring.kaddem.services.repositories.EtudiantRepository;
 import tn.esprit.spring.kaddem.services.services.EtudiantServiceImpl;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 import static tn.esprit.spring.kaddem.services.entities.Option.GAMIX;
-
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
