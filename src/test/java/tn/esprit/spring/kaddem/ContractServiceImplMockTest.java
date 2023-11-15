@@ -33,7 +33,7 @@ import static tn.esprit.spring.kaddem.entities.Specialite.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
 @RunWith(MockitoJUnitRunner.class)
-public class ContractServiceImplTest {
+public class ContractServiceImplMockTest {
 
     @Mock
     ContratRepository contratRepository;

@@ -8,17 +8,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.spring.kaddem.entities.Contrat;
 import tn.esprit.spring.kaddem.services.IContratService;
 
-import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
 import static tn.esprit.spring.kaddem.entities.Specialite.CLOUD;
 
 
-/*@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@SpringBootTest*/
-public class ContratServiceImplTestFile {
-  /*  @Autowired
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@SpringBootTest
+public class ContratServiceImplJunitTest {
+    @Autowired
     IContratService contratService;
 
     @Test
@@ -26,7 +25,7 @@ public class ContratServiceImplTestFile {
     public void TestRetrieveAllContrats()
     {
         List<Contrat> contrats = contratService.retrieveAllContrats();
-        Assertions.assertEquals(1,1);
+        Assertions.assertNotNull(contrats);
     }
 
     @Test
@@ -38,7 +37,5 @@ public class ContratServiceImplTestFile {
         Contrat contrat1=contratService.addContrat(contrat);
         Assertions.assertEquals(contrat.getArchive(),contrat1.getArchive());
     }
-
-*/
 
 }
