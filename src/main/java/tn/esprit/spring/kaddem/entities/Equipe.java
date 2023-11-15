@@ -94,4 +94,5 @@ public class Equipe implements Serializable{
         this.niveau = niveau;
     }
 
+
 }
