@@ -76,7 +76,7 @@ public class EquipeServiceImplMockTest {
     @Order(3)
     public void testAddEquipe() {
         // Create a new Equipe object to add.
-        Equipe newEquipe = new Equipe(4, "Nouvelle Equipe 4", Niveau.JUNIOR);
+        Equipe newEquipe = new Equipe(4, "Nouvelle Equipe 4", Niveau.SENIOR);
 
         // Mock the behavior of the repository when the save method is called.
         when(eqRep.save(newEquipe)).thenReturn(newEquipe);
