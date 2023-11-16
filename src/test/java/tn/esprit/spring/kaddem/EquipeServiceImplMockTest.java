@@ -31,6 +31,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 @RunWith(MockitoJUnitRunner.class)
 public class EquipeServiceImplMockTest {
+    // class test mock
     @Mock
     EquipeRepository eqRep;
     @InjectMocks
