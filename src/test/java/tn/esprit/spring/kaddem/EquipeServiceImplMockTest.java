@@ -46,7 +46,7 @@ public class EquipeServiceImplMockTest {
 
     @Test
 
-    void updatedequipe() {
+    public void updatedequipe() {
 
         Mockito.when(eqRep.findById(equipe.getIdEquipe())).thenReturn(Optional.of(equipe));
         Equipe equipe1 = equipeService.retrieveEquipe(equipe.getIdEquipe());
