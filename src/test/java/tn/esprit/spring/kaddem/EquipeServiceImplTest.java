@@ -14,7 +14,7 @@ import java.util.List;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class EquipeServiceImplTest {
 
-
+// class test junit
 
    @Autowired
 
